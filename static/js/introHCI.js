@@ -12,7 +12,16 @@ function initializePage() {
 	$("#testjs").click(function(e) {
 		$('.jumbotron h1').text("Javascript is connected");
 	});
-
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+	$("a.thumbnail").click(projectClick);
+}
+
+function projectClick(e) {
+	// preventDefault() prevents the page from reloading upon clicking e.
+	e.preventDefault();
+	// In an event handler, $(this) refers to the object triggering the event.
+	$(this).css("background-color", "#7fff00");
+	var containingProject = $(this).closest(".project");
+	containingProject.append("<div class='project-description'><p>Description of the project.</p></div>");
 }
