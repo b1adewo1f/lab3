@@ -12,7 +12,7 @@ function initializePage() {
 	$("#testjs").click(function(e) {
 		$(".jumbotron h1").text("Javascript has taken control");
 		$("#testjs").text("Please wait...");
-		$(".jumbotron p").addClass("active");
+		$(".jumbotron p").toggleClass("active");
 	});
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
